@@ -1,39 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example HTML with Same Origin iFrame</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Example HTML with Same Origin iFrame</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 20px;
-    }
+      iframe {
+        border: 2px solid #333;
+        margin: 20px 0;
+        width: 100%;
+        height: 400px;
+      }
 
-    iframe {
-      border: 2px solid #333;
-      margin: 20px 0;
-      width: 100%;
-      height: 400px;
-    }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
 
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-
-<body>
-  <h1>Example HTML with Same Origin iFrame</h1>
-  <div id="iframe-container">
-        <iframe src="https://kasiagd.github.io/DEM-19149/iframe-content" title="Same Origin Iframe"></iframe>
-  </div>
-
-</body>
-
+  <body>
+    <h1>Example HTML with Same Origin iFrame</h1>
+    <div id="iframe-container">
+      <iframe
+        src="https://kasiagd.github.io/DEM-19149/iframe-content-nested-inner"
+        title="Same Origin Iframe"
+      ></iframe>
+    </div>
+  </body>
 </html>
