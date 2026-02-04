@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example HTML with Dynamic iFrame</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        iframe {
+            border: 2px solid #333;
+            margin: 20px 0;
+            width: 100%;
+            height: 400px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Example HTML with Dynamic iFrame</h1>
+    <button id="generate-iframe">Generate iFrame</button>
+    <div id="iframe-container"></div>
+
+    <script>
+        document.getElementById('generate-iframe').addEventListener('click', () => {
+            const container = document.getElementById('iframe-container');
+            container.innerHTML = ''; 
+            
+            const iframe = document.createElement('iframe');
+            iframe.src = 'iframe.html';
+            iframe.id = 'dynamic-iframe';
+            
+            container.appendChild(iframe);
+        });
+    </script>
+</body>
+</html>

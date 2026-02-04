@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Page with failed XHR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Example Page with failed XHR</h1>
+    <button id="send-xhr">Send failed XHR</button>
+    <script>
+        document.getElementById('send-xhr').addEventListener('click', () => {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'htttps://jsonplaceholder.typicode.com/todos/1');
+            xhr.onload = function() {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                   document.body.insertAdjacentHTML('beforeend', '<pre>' + xhr.responseText + '</pre>');
+                } else {
+                    document.body.insertAdjacentHTML('beforeend', '<p>Error: ' + xhr.status + '</p>');
+                }
+            };
+            xhr.onerror = function() {
+               document.body.insertAdjacentHTML('beforeend', '<p>XHR Request Error</p>');
+            };
+            xhr.send();
+        });
+    </script>
+</body>
+</html>
